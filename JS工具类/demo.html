@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>demo</title>
+	<meta name="author" content="Administrator" />
+	<!-- Date: 2013-07-24 -->
+</head>
+<body>
+<a href="javascript:;" onclick="ju.CreateJScript('cjs','http://www.baidu.com')">添加脚本</a> <a href="javascript:;" onclick="ju.DeleteJScript('cjs')">删除脚本</a>
+<script type="text/javascript" src="j_utils.js"></script>
+<script type="text/javascript">
+	ju.SetCookie("abc","abc's value",7,false);
+	document.write(ju.IsNullOrUndefined("   "));
+	(function(){
+		function test()
+		{
+			document.write('test');
+		}
+		window.test = test;
+	})();
+	test();
+	function CreateJs(id,url)
+	{
+		ju.CreateJScript(id,url);
+	}
+	function DeleteJs(id)
+	{
+		ju.DeleteJScript(id);
+	}
+</script>
+</body>
+</html>
+
